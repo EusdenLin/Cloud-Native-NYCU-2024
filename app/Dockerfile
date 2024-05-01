@@ -8,6 +8,8 @@ COPY src/ ./
 COPY tsconfig.json ./
 
 RUN npm ci
+RUN npm ci
+
 RUN npm run build
 
 FROM docker.io/library/node:21-alpine3.18 AS RUNNER
